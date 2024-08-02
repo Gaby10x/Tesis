@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acciones Inteligentes</title>
+    <link rel="stylesheet" href="stylesindex.css">
+</head>
+<body>
+    <main>
+        <div class="services-container">
+            <div class="service">
+                <img src="img/GPS.png" alt="GPS">
+                <button class="action-btn" onclick="openLink('gps')">GPS</button>
+            </div>
+            <div class="service">
+                <img src="img/motor.png" alt="Motor Control">
+                <button class="action-btn" onclick="openLink('motor')">Control de Motor</button>
+            </div>
+            <div class="service">
+                <img src="img/camara.png" alt="Cámaras de Seguridad">
+                <button class="action-btn" onclick="openLink('cameras')">Cámaras de Seguridad</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function openLink(action) {
+            let url = '';
+            switch(action) {
+                case 'gps':
+                    url = 'https://maps.app.goo.gl/KNqvyXLe3JJ3zPLy7';
+                    break;
+                case 'motor':
+                    url = 'https://link-to-motor-control.com';
+                    break;
+                case 'cameras':
+                    url = 'http://192.168.1.10';
+                    break;
+            }
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
